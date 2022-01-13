@@ -4,16 +4,18 @@
 # Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
 
 from typing import List
+import collections
 
 
 class Solution:
-    def testExpectedNums():
+    def test_expected_nums(self) -> None:
         nums = [1, 1, 1, 3, 4, 5, 5, 5, 5, 7, 7, 7, 9, 9]
-        expectedNums = [1, 3, 4, 5, 7, 9]
-        assert expectedNums == Solution.removeDuplicates(
-            Solution, nums), "Lists should be equal."
+        expected_nums = [1, 3, 4, 5, 7, 9]
+        returned_list = Solution.remove_duplicates(Solution, nums)
+        assert collections.Counter(expected_nums) == collections.Counter(
+            returned_list), "Lists should be equal."
 
-    def removeDuplicates(self, nums: List[int]) -> int:
+    def remove_duplicates(self, nums: List[int]) -> int:
         for i in range(len(nums)-1, 0, -1):
             if nums[i] == nums[i-1]:
                 del nums[i]
@@ -21,5 +23,5 @@ class Solution:
 
 
 if __name__ == "__main__":
-    Solution.testExpectedNums()
+    Solution.test_expected_nums(Solution)
     print("OK. Lists are equal.")

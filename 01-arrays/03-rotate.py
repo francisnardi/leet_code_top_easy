@@ -4,19 +4,21 @@ from typing import List
 
 
 class Solution:
-    def testExpectedNums():
+    def test_expected_nums(self) -> None:
         k = 3
         nums = [1, 2, 3, 4, 5, 6, 7]
-        expectedNums = [5, 6, 7, 1, 2, 3, 4]
-        assert expectedNums == Solution.rotate(
+        expected_nums = [5, 6, 7, 1, 2, 3, 4]
+        assert expected_nums == Solution.rotate(
             Solution, nums, k), "Lists should be equal."
 
     def rotate(self, nums: List[int], k: int) -> None:
-        for i in range(k % len(nums)):
+        i = 0
+        while(k % len(nums) - i > 0):
             nums.insert(0, nums.pop())
+            i += 1
         return nums
 
 
 if __name__ == "__main__":
-    Solution.testExpectedNums()
+    Solution.test_expected_nums(Solution)
     print("OK. Lists are equal.")

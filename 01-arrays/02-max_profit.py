@@ -6,19 +6,19 @@ from typing import List
 
 
 class Solution:
-    def testExpectedNums():
+    def test_expected_nums(self) -> None:
         prices = [7, 1, 5, 3, 6, 4]
-        expectedReturn = 7
-        assert expectedReturn == Solution.maxProfit(
+        expected_return = 7
+        assert expected_return == Solution.max_profit(
             Solution, prices), "Values should be equal."
 
-    def maxProfit(self, prices: List[int]) -> int:
-        max_profit = 0
+    def max_profit(self, prices: List[int]) -> int:
+        maxprofit = 0
         for i in range(len(prices) - 1):
-            max_profit += max(prices[i+1] - prices[i], 0)
-        return max_profit
+            maxprofit += max(prices[i+1] - prices[i], 0)
+        return maxprofit
 
 
 if __name__ == "__main__":
-    Solution.testExpectedNums()
+    Solution.test_expected_nums(Solution)
     print("OK. Values are equal.")
