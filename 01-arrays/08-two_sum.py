@@ -13,7 +13,7 @@ class Solution:
         expected_nums = [0, 1]
 
         assert collections.Counter(expected_nums) == collections.Counter(
-            Solution.two_sum(self, nums, target)), "Lists should be equal."
+            Solution.two_sum(self, nums, target)), "Values should be equal."
 
     def two_sum(self, nums: List[int], target: int) -> List[int]:
         dic = {}

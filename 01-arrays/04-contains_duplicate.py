@@ -9,7 +9,7 @@ class Solution:
         duplicate = True
         nums = [1, 2, 3, 1]
         assert duplicate == Solution.contains_duplicate(
-            Solution, nums), "Lists should be equal."
+            Solution, nums), "Values should be equal."
 
     def contains_duplicate(self, nums: List[int]) -> bool:
         dic = {}
@@ -22,4 +22,4 @@ class Solution:
 
 if __name__ == "__main__":
     Solution.test_expected_nums(Solution)
-    print("OK. Lists are equal.")
+    print("OK. Values are equal.")

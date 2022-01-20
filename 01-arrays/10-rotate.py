@@ -3,7 +3,6 @@
 # DO NOT allocate another 2D matrix and do the rotation.
 
 from typing import List
-import collections
 import numpy as np
 
 
@@ -14,7 +13,7 @@ class Solution:
         output = Solution.rotate_image(self, matrix)
         x = np.array(expected_output)
         y = np.array(output)
-        assert x.all() == y.all(), "Lists should be equal."
+        assert x.all() == y.all(), "Values should be equal."
 
     def rotate_image(self, matrix: List[List[int]]) -> None:
         n = len(matrix)

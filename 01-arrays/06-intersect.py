@@ -12,7 +12,7 @@ class Solution:
         output1 = [4, 9]
         output2 = Solution.intersect(self, nums1, nums2)
         assert collections.Counter(output1) == collections.Counter(
-            output2), "Lists should be equal."
+            output2), "Values should be equal."
 
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
         ht1 = dict()

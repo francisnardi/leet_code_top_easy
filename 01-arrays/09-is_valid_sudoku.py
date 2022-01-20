@@ -6,7 +6,6 @@
 # Only the filled cells need to be validated according to the mentioned rules.
 
 from typing import List
-import collections
 
 
 class Solution:
@@ -23,7 +22,7 @@ class Solution:
         output = True
 
         assert output == Solution.is_valid_sudoku(
-            self, board), "Lists should be equal."
+            self, board), "Values should be equal."
 
     def is_valid_sudoku(self, board: List[List[str]]) -> bool:
         final = set()

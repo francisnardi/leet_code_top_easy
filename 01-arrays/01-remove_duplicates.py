@@ -13,7 +13,7 @@ class Solution:
         expected_nums = [1, 3, 4, 5, 7, 9]
         returned_list = Solution.remove_duplicates(Solution, nums)
         assert collections.Counter(expected_nums) == collections.Counter(
-            returned_list), "Lists should be equal."
+            returned_list), "Values should be equal."
 
     def remove_duplicates(self, nums: List[int]) -> int:
         for i in range(len(nums)-1, 0, -1):
@@ -24,4 +24,4 @@ class Solution:
 
 if __name__ == "__main__":
     Solution.test_expected_nums(Solution)
-    print("OK. Lists are equal.")
+    print("OK. Values are equal.")

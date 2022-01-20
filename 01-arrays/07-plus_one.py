@@ -14,7 +14,7 @@ class Solution:
         expected_nums = [1, 3, 12, 0, 0]
 
         assert collections.Counter(expected_nums) == collections.Counter(
-            Solution.move_zeroes(self, nums)), "Lists should be equal."
+            Solution.move_zeroes(self, nums)), "Values should be equal."
 
     def move_zeroes(self, nums: List[int]) -> List[int]:
         index = 0

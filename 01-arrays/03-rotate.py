@@ -9,7 +9,7 @@ class Solution:
         nums = [1, 2, 3, 4, 5, 6, 7]
         expected_nums = [5, 6, 7, 1, 2, 3, 4]
         assert expected_nums == Solution.rotate(
-            Solution, nums, k), "Lists should be equal."
+            Solution, nums, k), "Values should be equal."
 
     def rotate(self, nums: List[int], k: int) -> None:
         i = 0
@@ -21,4 +21,4 @@ class Solution:
 
 if __name__ == "__main__":
     Solution.test_expected_nums(Solution)
-    print("OK. Lists are equal.")
+    print("OK. Values are equal.")
