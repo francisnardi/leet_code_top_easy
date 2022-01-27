@@ -16,7 +16,6 @@ class Solution:
             if ls[0] == '-':
                 sign = -1
             ls = ls[1:]
-
         res, i = 0, 0
         while i < len(ls) and ls[i].isdigit():
             res = res*10 + ord(ls[i]) - ord('0')
